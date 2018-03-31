@@ -1,0 +1,245 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Brainhack Paris</title>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+<!--
+<link href='../css/base.css' rel='stylesheet' type='text/css'>
+-->
+<style>
+html, body, table {
+    margin:0;
+    font-family: Roboto, sans-serif;
+    font-size:1.2rem;
+    line-height:2rem;
+}
+.slide {
+    width:100%;
+    height:60rem;
+    position:relative;
+}
+.mainText {
+    position:absolute;
+    width:800px;
+    margin-left:50%;
+    transform: translate(-400px,-50%);
+}
+td.subtitle {
+    vertical-align:top;
+    text-align:left;
+    padding-right:4rem;
+}
+input {
+    font-size:1.2rem;
+}
+#imageContainer img {
+    width:100%;
+    filter:grayscale(90%) contrast(120%) opacity(50%);
+    -webkit-filter:grayscale(90%) contrast(120%) opacity(50%);
+    /*position:absolute;
+    top:0;
+    left:0;*/
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+@-moz-keyframes sc-down-a {
+  0% {
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -moz-transform: translateY(0px) rotate(45deg);
+    -o-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translateY(2px) rotate(45deg);
+    -moz-transform: translateY(2px) rotate(45deg);
+    -o-transform: translateY(2px) rotate(45deg);
+    -ms-transform: translateY(2px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
+  }
+}
+@-webkit-keyframes sc-down-a {
+  0% {
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -moz-transform: translateY(0px) rotate(45deg);
+    -o-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translateY(2px) rotate(45deg);
+    -moz-transform: translateY(2px) rotate(45deg);
+    -o-transform: translateY(2px) rotate(45deg);
+    -ms-transform: translateY(2px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
+  }
+}
+@-o-keyframes sc-down-a {
+  0% {
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -moz-transform: translateY(0px) rotate(45deg);
+    -o-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translateY(2px) rotate(45deg);
+    -moz-transform: translateY(2px) rotate(45deg);
+    -o-transform: translateY(2px) rotate(45deg);
+    -ms-transform: translateY(2px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
+  }
+}
+@keyframes sc-down-a {
+  0% {
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -moz-transform: translateY(0px) rotate(45deg);
+    -o-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translateY(2px) rotate(45deg);
+    -moz-transform: translateY(2px) rotate(45deg);
+    -o-transform: translateY(2px) rotate(45deg);
+    -ms-transform: translateY(2px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
+  }
+}
+.btn-scroll-down {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  -webkit-transition: display 0.5s easy-in-out;
+  -moz-transition: display 0.5s easy-in-out;
+  -o-transition: display 0.5s easy-in-out;
+  -ms-transition: display 0.5s easy-in-out;
+  transition: display 0.5s easy-in-out;
+}
+.btn-scroll-down:before,
+.btn-scroll-down:after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.btn-scroll-down:before {
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+}
+.btn-scroll-down:after {
+  width: 30px;
+  height: 30px;
+  bottom: 35px;
+  -webkit-animation: sc-down-a 0.3s infinite alternate;
+  -moz-animation: sc-down-a 0.3s infinite alternate;
+  -o-animation: sc-down-a 0.3s infinite alternate;
+  -ms-animation: sc-down-a 0.3s infinite alternate;
+  animation: sc-down-a 0.3s infinite alternate;
+}
+</style>
+<script src="libs/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div class="row" style="width:100%;height:100%">
+<div class="col sidespace"></div>
+<div class="col">
+
+    <div style="width:100%;position:relative">
+        <div id="imageContainer" style="width:100%;height:40em;overflow:hidden;background-color:black">
+            <img id="aImage"/>
+        </div>
+        <div style="color:white;position:absolute;top:1em;right:1em;text-align:right;padding:0.25em">
+            <b style="font-family:Lobster;font-size:4rem">Brainhack Paris</b>
+            <p style="font-family:Roboto;font-size:1.5rem;text-align:right;padding:2.25em"><a href="https://brainhack-paris.github.io/global2018/index.html" style="color:white">Brainhack global: Paris, 2 to 4 May 2018</a></p>
+        </div>
+    </div>
+
+        <a href="http://neuroanatomy.github.io">
+        <div style="position:absolute;bottom:10px;margin:0 auto;text-align:center;width:100%">
+            <img src="img/naat-bw.svg" style="width:30px;vertical-align:middle"/><span style="font-size:16px;padding-left:10px">groupe de neuroanatomie appliquée et théorique</span>
+        </div>
+        </a>
+    </div>
+</div>
+
+<script>
+
+$("#imageContainer").height($(window).height());
+$(".slide").height($(window).height());
+$(".slide .mainText").css({marginTop:$(window).height()/2});
+
+var gallery=[
+    {image:"img/a.jpg"},
+    {image:"img/b.jpg"},
+    {image:"img/c.jpg"},
+    {image:"img/d.jpg"},
+    {image:"img/e.jpg"},
+    {image:"img/f.jpg"},
+    {image:"img/g.jpg"},
+    {image:"img/h.jpg"},
+    {image:"img/i.jpg"},
+    {image:"img/j.jpg"},
+    {image:"img/k.jpg"},
+    {image:"img/l.jpg"},
+    {image:"img/m.jpg"},
+    {image:"img/n.jpg"},
+    {image:"img/o.jpg"},
+    {image:"img/p.jpg"},
+    {image:"img/q.jpg"},
+    {image:"img/r.jpg"},
+    {image:"img/s.jpg"},
+    {image:"img/t.jpg"},
+    {image:"img/u.jpg"}
+];
+var    a=Math.floor(Math.random()*gallery.length);
+
+$("#aImage").attr("src",gallery[a].image);
+
+setInterval(function() {
+    a=Math.floor(Math.random()*gallery.length);
+    $("#aImage").fadeOut(2000,function() {
+        $("#aImage").attr("src",gallery[a].image);
+        $("#aImage").fadeIn(2000);
+    });
+},6000);
+
+for(i=0;i<gallery.length;i++) {
+    var img = new Image();
+    img.src = gallery[i].image;
+}
+
+$("#register").click(function() {
+    $.get("https://braincatalogue.org/php/email.php",{
+        name:$("#reg-name").val(),
+        email:$("#reg-email").val(),
+        inst:$("#reg-institution").val()
+    })
+    .done(function(data) {
+        $("#register strong").text("Done!");
+    });
+});
+
+</script>
+
+</body>
+</html>
