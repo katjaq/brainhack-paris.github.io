@@ -2,8 +2,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Brainhack Paris</title>
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+<!--
+font-family: 'Press Start 2P', cursive;
+font-family: 'Libre Barcode 128 Text', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Aldrich', sans-serif;
+font-family: 'Black Ops One', cursive;
+font-family: 'Megrim', cursive;
+font-family: 'UnifrakturMaguntia', cursive;
+font-family: 'Libre Barcode 39 Extended Text', cursive;
+font-family: 'Geostar Fill', cursive;
+-->
 <!--
 <link href='../css/base.css' rel='stylesheet' type='text/css'>
 -->
@@ -35,8 +49,8 @@ input {
 }
 #imageContainer img {
     width:100%;
-    filter:grayscale(90%) contrast(120%) opacity(50%);
-    -webkit-filter:grayscale(90%) contrast(120%) opacity(50%);
+    filter:grayscale(90%) contrast(120%) opacity(30%);
+    -webkit-filter:grayscale(90%) contrast(120%) opacity(30%);
     /*position:absolute;
     top:0;
     left:0;*/
@@ -156,6 +170,13 @@ a {
   -ms-animation: sc-down-a 0.3s infinite alternate;
   animation: sc-down-a 0.3s infinite alternate;
 }
+
+.fancy {
+    font-family:'Megrim';
+    font-size:4rem;
+    letter-spacing:10px;
+    line-height: 1.2
+}
 </style>
 <script src="libs/jquery-1.11.0.min.js"></script>
 </head>
@@ -165,25 +186,30 @@ a {
 <div class="col">
 
     <div style="width:100%;position:relative">
-        <div id="imageContainer" style="width:100%;height:40em;overflow:hidden;background-color:black">
-            <img id="aImage"/>
+        <div id="imageContainer" style="width:100%;height:100%;overflow:hidden;background-color:black">
+            <!--<img id="aImage"/>-->
+            <img style="height:100%" src="bg-img/anatomy-surface.jpg"/>
         </div>
-        <div style="color:white;position:absolute;top:1em;right:1em;text-align:right;padding:0.25em">
-            <b style="font-family:Lobster;font-size:4rem">Brainhack Paris</b>
-            <p style="font-family:Roboto;font-size:1.5rem;text-align:right;padding:2.25em"><a href="https://brainhack-paris.github.io/global2018/index.html" style="color:white">Brainhack global: Paris, 2 to 4 May 2018</a></p>
+        <div style="color:white;position:absolute;top:50%;transform:translate(-50%,-50%);left:50%;margin-right:-50%;transform:translate(-50%,-50%);text-align:center;padding:0.25em">
+            <!--
+            <b style="font-family:Megrim;font-size:4rem;letter-spacing:10px;line-height: 1.2">Brainhack Paris</b>
+-->
+            <b class='fancy'>Brainhack Paris</b>
+            <p style="font-family:Roboto;font-size:1.5rem;text-align:center;padding:2.25em"><a href="https://brainhack-paris.github.io/global2018/index.html" style="color:white">upcoming Brainhack<br>Brainhack global: Paris, 2 to 4 May 2018</a></p>
         </div>
     </div>
-
+        <!--
         <a href="http://neuroanatomy.github.io">
         <div style="position:absolute;bottom:10px;margin:0 auto;text-align:center;width:100%">
-            <img src="img/naat-bw.svg" style="width:30px;vertical-align:middle"/><span style="font-size:16px;padding-left:10px">groupe de neuroanatomie appliquée et théorique</span>
+            <img src="img/naat-wb.svg" style="width:30px;vertical-align:middle"/><span style="font-size:16px;padding-left:10px;color:white">groupe de neuroanatomie appliquée et théorique</span>
         </div>
         </a>
+        -->
     </div>
 </div>
 
+<!--
 <script>
-
 $("#imageContainer").height($(window).height());
 $(".slide").height($(window).height());
 $(".slide .mainText").css({marginTop:$(window).height()/2});
@@ -240,6 +266,7 @@ $("#register").click(function() {
 });
 
 </script>
+-->
 
 </body>
 </html>
