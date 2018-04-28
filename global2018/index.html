@@ -421,6 +421,11 @@ $("#register").click(function() {
     })
     .done(function(data) {
         $("#register strong").text("Done!");
+        //alert("Registration successful!");
+    })
+    .fail(function(error) {
+        alert("ERROR. Try again later or contact us at brainhack.paris@gmail.com");
+        console.error(error);
     });
 });
 
